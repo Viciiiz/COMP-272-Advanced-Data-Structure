@@ -203,7 +203,7 @@ public final class MaxSumTest
                 + " from " + seqStart + " to " + seqEnd );
 
         // Get some timing info
-        for( int n = 100; n <= 1000000; n *= 10 )
+        for( int n = 10000; n <= 18000; n += 1000 )
         {
             System.out.print( String.format( "N = %7d" , n ) );
 
