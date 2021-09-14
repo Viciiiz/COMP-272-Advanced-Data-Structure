@@ -33,8 +33,6 @@ public class FlexArray
             return num;
         }
         else throw new ArrayIndexOutOfBoundsException();
-
-
     }
 
     public int get(int location) {
@@ -42,8 +40,6 @@ public class FlexArray
             return array[location];
         }
         else throw new ArrayIndexOutOfBoundsException();
-
-
     }
 
 
