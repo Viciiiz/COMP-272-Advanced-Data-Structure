@@ -21,4 +21,16 @@ public class Node<E> {
     public void setInfo(E i){
         info = i;
     }
+
+    public E getInfo() {
+        return info;
+    }
+
+    public Node<E> getNext(){
+        return next;
+    }
+
+    public Node<E> getPrev(){
+        return prev;
+    }
 }
