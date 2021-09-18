@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.*;
 
 public class ExtLinkedList <E> extends LinkedList {
 
@@ -10,16 +10,24 @@ public class ExtLinkedList <E> extends LinkedList {
      */
     public ExtLinkedList <E> secondHalfList() {
         if (this.size()<2) return null;
-        ExtLinkedList <E> thisList = (ExtLinkedList<E>) this.clone(); // clone() makes sure to keep the original list unchanged
+        ArrayList <E> thisList = cloneLinkedList();
         ExtLinkedList <E> extLinkedList = new ExtLinkedList<E>();
         int half = (int) Math.ceil(thisList.size()/2.0);
         for(int i = 0 ; i < this.size(); i++){
-            thisList.pop();
-            if(i >= half){
-                extLinkedList.add(thisList.pop());
+            if (i >= half){
+                extLinkedList.add(thisList.get(i));
             }
+
         }
         return extLinkedList;
+    }
+
+    // from the provided example
+    public ArrayList<E> cloneLinkedList()  {
+        ArrayList<E> al  = new  ArrayList<E>();
+        ListIterator<E> li =  this.listIterator();
+        while  (li.hasNext()) al.add(li.next());
+        return  al;
     }
 
     /**
@@ -29,7 +37,7 @@ public class ExtLinkedList <E> extends LinkedList {
      * @return ExtLinkedList object containing the elements with odd values
      */
     public ExtLinkedList<E> oddList(){
-        if (this.size()<2) return null;
+        if (this.size()<1) return null;
         ExtLinkedList <E> thisList = (ExtLinkedList<E>) this.clone(); // clone() makes sure to keep the original list unchanged
         ExtLinkedList <E> odd = new ExtLinkedList<E>();
         for(int i = 0 ; i < this.size(); i++){
@@ -49,16 +57,32 @@ public class ExtLinkedList <E> extends LinkedList {
      * @return
      */
     public ExtLinkedList<E> evenList(){
-        if (this.size()<2) return null;
+        if (this.size()<1) return null;
         ExtLinkedList <E> thisList = (ExtLinkedList<E>) this.clone(); // clone() makes sure to keep the original list unchanged
         ExtLinkedList <E> even = new ExtLinkedList<E>();
         for(int i = 0 ; i < this.size(); i++){
-            if(i % 2 == 1){
+            if(i % 2 == 0){
                 even.add(thisList.pop());
             } else {
                 thisList.pop();
             }
         }
         return even;
+    }
+
+    public static void main(String[] args) {
+        ExtLinkedList<Integer> extLinkedList = new ExtLinkedList<>();
+        extLinkedList.add(1);
+        extLinkedList.add(2);
+        extLinkedList.add(6);
+        extLinkedList.add(10);
+        extLinkedList.add(17);
+        extLinkedList.add(13);
+
+        System.out.println(extLinkedList.evenList());
+        System.out.println(extLinkedList.oddList());
+        System.out.println(extLinkedList.secondHalfList());
+        System.out.println(extLinkedList);
+
     }
 }

@@ -78,8 +78,8 @@ public class MyLinkedList<E> {
                 currentNode.getPrev().setNext(currentNode.getNext());
                 currentNode.getNext().setPrev(currentNode.getPrev());
                 val = currentNode.getInfo();
-                currentNode = null;
             }
+            size--;
         }
         return val;
     }
