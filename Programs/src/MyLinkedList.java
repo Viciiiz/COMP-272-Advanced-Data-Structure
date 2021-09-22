@@ -199,7 +199,6 @@ public class MyLinkedList<E> {
         if(isEmpty() && otherList1.isEmpty()) return true;
         else if (size != otherList1.size) return false;
         else {
-            System.out.println("here");
             for(int i = 0; i < size; i++){
                 if(!(Objects.equals(get(i), otherList1.get(i)))) return false;
             }
