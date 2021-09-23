@@ -1,40 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="634260ad-32ad-4315-8d8f-80afa3c8013f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="46405bd5-5f14-4037-9300-45d9145058bf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP-272-Advanced-Data-Structure.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Programs/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Programs/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Programs/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/Programs.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/out/production/Collatz conjecture/Collatz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/out/production/Collatz conjecture/MaxSumTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/Collatz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/ExtLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/FlexArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/Homework2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/MaxSumTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/MyBigInteger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/MyLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programs/src/lesson.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/Collatz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/ExtLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/FlexArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/Homework2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/MaxSumTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/MyBigInteger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/MyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP-272-Advanced-Data-Structure/lesson.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/COMP 272.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinaryTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1yYZTOzW5jhAHQoG63yVD3kwKCe" />
+  <component name="ProjectId" id="1yYa8iZBgqM9RdfUyNJWBGq1H6l" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,11 +32,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="634260ad-32ad-4315-8d8f-80afa3c8013f" name="Changes" comment="" />
-      <created>1632430490541</created>
+      <changelist id="46405bd5-5f14-4037-9300-45d9145058bf" name="Changes" comment="" />
+      <created>1632430819088</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1632430490541</updated>
+      <updated>1632430819088</updated>
     </task>
     <servers />
   </component>
