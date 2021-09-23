@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MaxSumTest/MaxSumTest.iml" filepath="$PROJECT_DIR$/MaxSumTest/MaxSumTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Programs.iml" filepath="$PROJECT_DIR$/Programs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/COMP-272-Advanced-Data-Structure.iml" filepath="$PROJECT_DIR$/COMP-272-Advanced-Data-Structure.iml" />
     </modules>
   </component>
 </project>
