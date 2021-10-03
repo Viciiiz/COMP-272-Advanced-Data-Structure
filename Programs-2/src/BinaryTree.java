@@ -10,12 +10,17 @@ public class BinaryTree<E> {
         root=null;
     }
 
+
     public BinaryTree(E val) {
         root = new Node(val);
         // root node only
         size=1;
 
     }
+    public boolean isEmpty() {
+        return size==0;
+    }
+
 
     public Node<E> addLeft(Node<E> node, E val) {
         Node<E> n = new Node(val);
@@ -35,7 +40,7 @@ public class BinaryTree<E> {
     public void preOrder(Node<E> n) {
 
         if (n==null) return;
-        System.out.println(n.getLabel());
+        System.out.println(n.getInfo());
         preOrder(n.getLeft());
         preOrder(n.getRight());
 
@@ -45,7 +50,7 @@ public class BinaryTree<E> {
 
         if (n==null) return;
         inOrder(n.getLeft());
-        System.out.println(n.getLabel());
+        System.out.println(n.getInfo());
         inOrder(n.getRight());
 
     }
@@ -53,10 +58,9 @@ public class BinaryTree<E> {
     public void postOrder(Node<E> n) {
 
         if (n==null) return;
-
         postOrder(n.getLeft());
         postOrder(n.getRight());
-        System.out.println(n.getLabel());
+        System.out.println(n.getInfo());
 
     }
 
@@ -75,6 +79,10 @@ public class BinaryTree<E> {
         bt.addLeft(n2,"y");
         bt.addRight(n2,"z");
         bt.postOrder(bt.root);
+        System.out.println();
+        bt.preOrder(bt.root);
+        System.out.println();
+        bt.inOrder(bt.root);
     }
 
 }
