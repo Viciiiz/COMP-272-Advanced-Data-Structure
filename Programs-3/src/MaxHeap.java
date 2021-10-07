@@ -1,15 +1,18 @@
 
 import java.util.*;
 public class MaxHeap<E extends Comparable<E>> extends ArrayList<E>   {
+
+    ArrayList<E> arrayList;
     // construct an empty Heap using ArrayList
     // with root at index 0.
     // don't use binary tree for implementing the heap.
     public MaxHeap(){
-
+        arrayList = new ArrayList<>();
     }
     // returns max value
     public E findMax() {
-
+        if(arrayList.size()==0) return null;
+        return arrayList.get(0);
     }
 
     // adds a new value to the heap at the end of the Heap and 

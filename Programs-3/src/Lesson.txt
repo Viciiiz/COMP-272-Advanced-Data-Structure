@@ -1,5 +1,6 @@
 
 HEAP
+https://medium.com/basecs/learning-to-love-heaps-cef2b273a238
 
 a single node is the root of the heap
 you add a second value, left node of the root, one comparison is needed
@@ -83,4 +84,11 @@ Removal can be done like this.
     new in java
     reference is in the "usual" memory but the object pointed to by the reference is allocated in the java heap.
     also used in priority queues
+
+
+_______________________________________________________________
+
+
+Horner's rule: to read
+https://www.geeksforgeeks.org/horners-method-polynomial-evaluation/
 
