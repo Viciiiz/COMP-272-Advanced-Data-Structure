@@ -20,6 +20,30 @@ public class MaxHeap<E extends Comparable<E>> extends ArrayList<E>   {
     // parent of node at i is given by the formula (i-1)/2
     // throw appropriate exception
     public void addHeap(E val) {
+        try {
+            if (arrayList.size() == 0){
+                arrayList.add(val);
+                return;
+            }
+            arrayList.add(val);
+            int currentIndex = arrayList.size()-1;
+            boolean foundPlace = false;
+            while((currentIndex - 1) / 2 >= 0 && !foundPlace){
+                // if inserted value is smaller or equals to parent's value, return;
+                if(arrayList.get((currentIndex - 1) / 2).compareTo(arrayList.get(currentIndex)) >= 0) {
+                    foundPlace = true;
+                }
+                else{ // if inserted value is bigger, swap with parents
+                    // index of parent is (i - 1) / 2
+                    E temp = arrayList.get(currentIndex);
+                    arrayList.set(currentIndex, arrayList.get((currentIndex - 1) / 2));
+                    arrayList.set((currentIndex - 1) / 2, temp);
+                    currentIndex = (currentIndex - 1) / 2;
+                }
+            }
+        } catch (Exception E){
+            System.out.println("You can't add an element of a different type to the heap. ");
+        }
 
     }
 
@@ -29,24 +53,107 @@ public class MaxHeap<E extends Comparable<E>> extends ArrayList<E>   {
     // bounds of the Heap index, namely, 0 ... size()-1.
     // throw appropriate exception
     public E removeHeap() {
+        // if heap is empty
+        if(arrayList.size() == 0) return null;
+        E valueToReturn = arrayList.get(0);
+        arrayList.set(0, arrayList.get(arrayList.size()-1));
+        arrayList.remove(arrayList.size()-1);
+        boolean placeFound = false;
+        int maxSize = arrayList.size()-1;
+        int currentIndex = 0;
+        while(2*currentIndex+1 <= maxSize && !placeFound){
+            // if current node has 2 children
+            if (2 * currentIndex + 2 <= maxSize){
+                E temp;
+                // if current node is greater than the two children, found place
+                if(arrayList.get(currentIndex).compareTo(arrayList.get(2 * currentIndex +  2)) > 0 &&
+                        arrayList.get(currentIndex).compareTo(arrayList.get(2 * currentIndex +  1)) > 0){
+                    placeFound = true;
+                }
 
+                // if right child greater than left, swap current node with right child
+                else if(arrayList.get(2 * currentIndex +  2).compareTo(arrayList.get(2 * currentIndex + 1)) >= 0){
+                    temp = arrayList.get(2 * currentIndex +  2);
+                    arrayList.set(2 * currentIndex +  2, arrayList.get(currentIndex));
+                    arrayList.set(currentIndex, temp);
+                    currentIndex = 2 * currentIndex +  2;
+                } else { // if left child is greater than right child, swap current node with left child
+                    temp = arrayList.get(2 * currentIndex +  1);
+                    arrayList.set(2 * currentIndex +  1, arrayList.get(currentIndex));
+                    arrayList.set(currentIndex, temp);
+                    currentIndex = 2 * currentIndex +  1;
+                }
+            } else if (2 * currentIndex + 1 == maxSize){ // if current node has only one child
+                // if current node greater than child, place found
+                if(arrayList.get(currentIndex).compareTo(arrayList.get(2*currentIndex+1)) > 0) {
+                    placeFound = true;
+                }
+                else { // else swap
+                    E temp = arrayList.get(currentIndex);
+                    arrayList.set(currentIndex, arrayList.get(2*currentIndex+1));
+                    arrayList.set(2*currentIndex+1, temp);
+                    placeFound = true;
+                }
+            }
+        }
+        return valueToReturn;
     }
 
     // takes a list of items E and builds the heap and then prints 
     // decreasing values of E with calls to removeHeap().  
     public void heapSort(List<E> list){
-
+        buildHeap(list);
+        System.out.println("sorted: ");
+        int size = arrayList.size();
+        for(int i = 0; i < size; i++) System.out.print(removeHeap() + "  ");
+        System.out.println();
     }
 
     // merges the other maxheap with this maxheap to produce a new maxHeap.  
     public void heapMerge(MaxHeap<E> other){
-
+        int size = other.arrayList.size();
+        for(int i = 0; i < size; i++){
+            addHeap(other.arrayList.get(i));
+        }
     }
 
     //takes a list of items E and builds the heap by calls to addHeap(..)
     public void buildHeap(List<E> list) {
-
+        for (E e : list) {
+            addHeap(e);
+        }
     }
 
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(19);
+        list.add(35);
+        list.add(4);
+        list.add(2);
+        list.add(20);
+        list.add(6);
+        list.add(12);
+        list.add(43);
+        MaxHeap<Integer> maxHeap = new MaxHeap<>();
+        maxHeap.buildHeap(list);
+        System.out.println("old: " + maxHeap.arrayList);
+
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list2.add(13);
+        list2.add(36);
+        list2.add(5);
+        list2.add(4);
+        list2.add(7);
+        list2.add(22);
+        list2.add(19);
+        list2.add(46);
+        MaxHeap<Integer> alpha = new MaxHeap<>();
+        alpha.buildHeap(list2);
+        System.out.println("alpha: " + alpha.arrayList);
+        maxHeap.heapMerge(alpha);
+
+        System.out.println();
+        System.out.println("new: " + maxHeap.arrayList);
+    }
 
 }

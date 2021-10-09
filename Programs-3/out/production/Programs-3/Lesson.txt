@@ -1,0 +1,94 @@
+
+HEAP
+https://medium.com/basecs/learning-to-love-heaps-cef2b273a238
+
+a single node is the root of the heap
+you add a second value, left node of the root, one comparison is needed
+you add a third value, right node of the root, one comparison is needed
+fourth value, you need to make two comparisons
+...
+
+number of comparisons at level 1 = 2
+number of comparisons at level 2 = 4*2 = 2^2 * 2
+at level 3 = 2^3 * 3
+(if height = h, the total number of nodes < 2 ^ (h+1) - 1 for a complete binary tree)
+level 4 = 2 ^ 4 * 4
+level h = 2 ^ h * h
+
+To build the heap, total number of comparisons needed =
+        2 + 2^2 * 2 + 2^3 * 3 + .......... + 2^h * h
+
+n <= 2^(h+1) - 1
+h = O(log n) base 2
+
+2^h = 2^(log n) = nlogn
+whole time complexity is O(n log n)
+
+
+removing the top of a heap:
+- move the last node to the top.
+- compare  and move nodes until heap is in order again (each parent must be greater or = to the value of their child)
+
+adding a node to a heap
+put the node in the next available spot
+push the node upward until it reaches an acceptable location.
+
+
+To build a heap:
+use an arraylist H for representing a heap (not a binary tree)
+for building a heap if I add a value at index i of H, I should know where its parent is.
+parent is always at floor (i-1)/2,
+let us say i = 4
+floor (i-1)/2 = 1 (round down operation)
+when i=2, parent is at 0.
+
+
+Removal can be done like this.
+    print H.get(0)
+    H.set(0, H.get(size-1))
+    H.remove(size-1)
+    now I have to know how to find where the children are, given a parent value j
+    The children (if found) are always at 2j+1, 2j+2
+                                                        ___________
+                                                        example:
+                                                                    42
+                                                                 /      \
+                                                                35      23
+                                                             /      \
+                                                            27      21
+
+                                                        Here, index 1 = 42
+                                                              index 2 = 35
+                                                              index 3 = 23
+                                                              index 4 = 27
+                                                              index 5 = 21
+                                                              last element = 21
+                                                              root = 42
+                                                        ___________
+
+    polynomial of degree 3
+    f(x) = a+bx+cx^2+dx^3, a, b, c, d are constants
+    g(x) = px+qx^2
+
+    add f and g = a + (b+p)x + (c+q)^2 + dx^3
+    a,b,c,d
+    0,p,q,0
+
+    a,b+p,c+q,d
+
+    heap sort is (nlogn)
+    build heap and do successful removals. come out in descending order
+
+    heap structure is used in memory management in computers
+
+    new in java
+    reference is in the "usual" memory but the object pointed to by the reference is allocated in the java heap.
+    also used in priority queues
+
+
+_______________________________________________________________
+
+
+Horner's rule: to read
+https://www.geeksforgeeks.org/horners-method-polynomial-evaluation/
+
