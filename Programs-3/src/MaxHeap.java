@@ -124,36 +124,4 @@ public class MaxHeap<E extends Comparable<E>> extends ArrayList<E>   {
         }
     }
 
-    public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(19);
-        list.add(35);
-        list.add(4);
-        list.add(2);
-        list.add(20);
-        list.add(6);
-        list.add(12);
-        list.add(43);
-        MaxHeap<Integer> maxHeap = new MaxHeap<>();
-        maxHeap.buildHeap(list);
-        System.out.println("old: " + maxHeap.arrayList);
-
-        ArrayList<Integer> list2 = new ArrayList<>();
-        list2.add(13);
-        list2.add(36);
-        list2.add(5);
-        list2.add(4);
-        list2.add(7);
-        list2.add(22);
-        list2.add(19);
-        list2.add(46);
-        MaxHeap<Integer> alpha = new MaxHeap<>();
-        alpha.buildHeap(list2);
-        System.out.println("alpha: " + alpha.arrayList);
-        maxHeap.heapMerge(alpha);
-
-        System.out.println();
-        System.out.println("new: " + maxHeap.arrayList);
-    }
-
 }
