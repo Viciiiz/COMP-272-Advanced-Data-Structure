@@ -43,4 +43,24 @@ public class Graph {
         }
         else throw new IndexOutOfBoundsException();
     }
+
+    // check if current subgraph is a tree
+    boolean isTree(int v, boolean visited[], int parent)
+    {
+        visited[v] = true;
+        Integer i;
+
+        Iterator<Integer> it = graph.get(v).iterator();
+        while (it.hasNext()) {
+            i = it.next();
+            if (!visited[i]) {
+                if (isTree(i, visited, v))
+                    return true;
+            } else if (i != parent)
+                return true;
+        }
+        return false;
+    }
+
+
 }
